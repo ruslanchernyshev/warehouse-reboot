@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import successImage from "@/assets/success-team.jpg";
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote } from "lucide-react";
+import { Quote, TrendingUp, Users } from "lucide-react";
 
 export const CasesSection = () => {
   const { t } = useLanguage();
@@ -24,7 +24,7 @@ export const CasesSection = () => {
           {t('cases.title')}
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {cases.map((caseItem, index) => (
             <motion.div
               key={index}
@@ -48,9 +48,46 @@ export const CasesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden shadow-2xl"
+          className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px]"
         >
-          <img src={successImage} alt="Success team" className="w-full h-auto" />
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${successImage})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/90" />
+          </div>
+          
+          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="space-y-8"
+            >
+              <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
+                <div className="space-y-2">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-foreground/20 mb-2">
+                    <TrendingUp className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-5xl font-bold text-primary-foreground">{t('cases.stats.years')}</h3>
+                  <p className="text-xl text-primary-foreground/90">{t('cases.stats.yearsDesc')}</p>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-foreground/20 mb-2">
+                    <Users className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-5xl font-bold text-primary-foreground">{t('cases.stats.clients')}</h3>
+                  <p className="text-xl text-primary-foreground/90">{t('cases.stats.clientsDesc')}</p>
+                </div>
+              </div>
+              
+              <p className="text-2xl font-bold text-primary-foreground mt-8">
+                {t('cases.stats.cta')}
+              </p>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -78,15 +78,6 @@ export const SolutionSection = () => {
             ))}
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden shadow-xl"
-        >
-          <img src={solutionImage} alt="Technology solution" className="w-full h-auto" />
-        </motion.div>
       </div>
     </section>
   );

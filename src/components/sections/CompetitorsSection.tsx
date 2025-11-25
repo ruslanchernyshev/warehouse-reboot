@@ -28,32 +28,32 @@ export const CompetitorsSection = () => {
               <TableRow className="bg-primary/10 hover:bg-primary/10">
                 <TableHead className="text-foreground font-bold">{t('competitors.param')}</TableHead>
                 <TableHead className="text-foreground font-bold bg-primary/20">{t('competitors.us')}</TableHead>
-                <TableHead className="text-foreground font-bold">{t('competitors.enterprise')}</TableHead>
-                <TableHead className="text-foreground font-bold">{t('competitors.local')}</TableHead>
-                <TableHead className="text-foreground font-bold">{t('competitors.odoo')}</TableHead>
+                <TableHead className="text-foreground font-bold bg-accent/20">{t('competitors.enterprise')}</TableHead>
+                <TableHead className="text-foreground font-bold bg-primary/20">{t('competitors.local')}</TableHead>
+                <TableHead className="text-foreground font-bold bg-accent/20">{t('competitors.odoo')}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               <TableRow className="hover:bg-muted/50">
                 <TableCell className="font-semibold text-foreground">{t('competitors.price')}</TableCell>
                 <TableCell className="bg-primary/5 font-bold text-primary">{t('competitors.us.price')}</TableCell>
-                <TableCell className="text-muted-foreground">{t('competitors.enterprise.price')}</TableCell>
-                <TableCell className="text-muted-foreground">{t('competitors.local.price')}</TableCell>
-                <TableCell className="text-muted-foreground">{t('competitors.odoo.price')}</TableCell>
+                <TableCell className="bg-accent/5 text-muted-foreground">{t('competitors.enterprise.price')}</TableCell>
+                <TableCell className="bg-primary/5 text-muted-foreground">{t('competitors.local.price')}</TableCell>
+                <TableCell className="bg-accent/5 text-muted-foreground">{t('competitors.odoo.price')}</TableCell>
               </TableRow>
               <TableRow className="hover:bg-muted/50">
                 <TableCell className="font-semibold text-foreground">{t('competitors.time')}</TableCell>
                 <TableCell className="bg-primary/5 font-bold text-primary">{t('competitors.us.time')}</TableCell>
-                <TableCell className="text-muted-foreground">{t('competitors.enterprise.time')}</TableCell>
-                <TableCell className="text-muted-foreground">{t('competitors.local.time')}</TableCell>
-                <TableCell className="text-muted-foreground">{t('competitors.odoo.time')}</TableCell>
+                <TableCell className="bg-accent/5 text-muted-foreground">{t('competitors.enterprise.time')}</TableCell>
+                <TableCell className="bg-primary/5 text-muted-foreground">{t('competitors.local.time')}</TableCell>
+                <TableCell className="bg-accent/5 text-muted-foreground">{t('competitors.odoo.time')}</TableCell>
               </TableRow>
               <TableRow className="hover:bg-muted/50">
                 <TableCell className="font-semibold text-foreground">{t('competitors.functionality')}</TableCell>
                 <TableCell className="bg-primary/5 font-bold text-primary">{t('competitors.us.functionality')}</TableCell>
-                <TableCell className="text-muted-foreground">{t('competitors.enterprise.functionality')}</TableCell>
-                <TableCell className="text-muted-foreground">{t('competitors.local.functionality')}</TableCell>
-                <TableCell className="text-muted-foreground">{t('competitors.odoo.functionality')}</TableCell>
+                <TableCell className="bg-accent/5 text-muted-foreground">{t('competitors.enterprise.functionality')}</TableCell>
+                <TableCell className="bg-primary/5 text-muted-foreground">{t('competitors.local.functionality')}</TableCell>
+                <TableCell className="bg-accent/5 text-muted-foreground">{t('competitors.odoo.functionality')}</TableCell>
               </TableRow>
             </TableBody>
           </Table>

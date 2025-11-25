@@ -10,6 +10,10 @@ import { WhyUsSection } from "@/components/sections/WhyUsSection";
 import { CompetitorsSection } from "@/components/sections/CompetitorsSection";
 import { CasesSection } from "@/components/sections/CasesSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { FloatingContact } from "@/components/FloatingContact";
+import { CookieConsent } from "@/components/CookieConsent";
 import { ContactForm } from "@/components/ContactForm";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
@@ -38,6 +42,10 @@ const Index = () => {
           <CasesSection />
           <CTASection onOpenForm={handleOpenForm} />
         </main>
+        <Footer />
+        <ScrollToTop />
+        <FloatingContact />
+        <CookieConsent />
         <ContactForm open={formOpen} onOpenChange={setFormOpen} type={formType} />
       </div>
     </LanguageProvider>

@@ -36,13 +36,13 @@ export const PricingSection = ({ onOpenForm }: PricingSectionProps) => {
           {t('pricing.title')}
         </motion.h2>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-card border-border shadow-xl">
+            <Card className="bg-card border-border shadow-xl h-full">
               <CardHeader className="text-center bg-gradient-to-br from-primary to-accent text-primary-foreground rounded-t-lg">
                 <CardTitle className="text-3xl">{t('pricing.base')}</CardTitle>
                 <div className="text-5xl font-bold mt-4">
@@ -78,6 +78,55 @@ export const PricingSection = ({ onOpenForm }: PricingSectionProps) => {
                   className="w-full mt-8 bg-primary text-primary-foreground hover:bg-primary/90"
                 >
                   {t('pricing.cta')}
+                </Button>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <Card className="bg-card border-border shadow-xl h-full">
+              <CardHeader className="text-center bg-gradient-to-br from-accent to-primary text-primary-foreground rounded-t-lg">
+                <CardTitle className="text-3xl">{t('pricing.custom')}</CardTitle>
+                <div className="text-3xl font-bold mt-4">
+                  {t('pricing.perMonth')}
+                </div>
+              </CardHeader>
+              <CardContent className="p-8">
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground">{t('pricing.custom.feature1')}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground">{t('pricing.custom.feature2')}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground">{t('pricing.custom.feature3')}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground">{t('pricing.custom.feature4')}</span>
+                  </li>
+                </ul>
+
+                <div className="border-t border-border pt-8">
+                  <p className="text-center text-muted-foreground mb-4">
+                    Ідеальне рішення для великих складів та складних інтеграцій
+                  </p>
+                </div>
+
+                <Button
+                  size="lg"
+                  onClick={() => onOpenForm('calculate')}
+                  className="w-full mt-8 bg-accent text-primary-foreground hover:bg-accent/90"
+                >
+                  {t('pricing.cta.custom')}
                 </Button>
               </CardContent>
             </Card>

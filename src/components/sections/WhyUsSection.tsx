@@ -37,11 +37,11 @@ export const WhyUsSection = () => {
               transition={{ delay: index * 0.1 }}
               className="text-center group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors">
-                <feature.icon className="w-8 h-8 text-primary" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 mb-4 group-hover:bg-primary/30 transition-colors border-2 border-primary/40">
+                <feature.icon className="w-8 h-8 text-primary drop-shadow-lg" />
               </div>
               <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-              <p className="text-secondary-foreground/80">{feature.desc}</p>
+              <p className="text-secondary-foreground/90">{feature.desc}</p>
             </motion.div>
           ))}
         </div>

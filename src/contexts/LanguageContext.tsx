@@ -88,16 +88,22 @@ const translations = {
     // Pricing
     'pricing.title': 'Прозоре ціноутворення',
     'pricing.base': 'Базовий пакет',
+    'pricing.custom': 'Своє рішення',
     'pricing.perMonth': '/місяць',
     'pricing.feature1': 'До 10 співробітників складу',
     'pricing.feature2': 'Повний набір функцій WMS',
     'pricing.feature3': 'Постійна підтримка та оновлення',
+    'pricing.custom.feature1': 'Індивідуальний аналіз потреб',
+    'pricing.custom.feature2': 'Розробка унікальних модулів',
+    'pricing.custom.feature3': 'Повна інтеграція з вашою ERP',
+    'pricing.custom.feature4': 'Виділений менеджер проекту',
     'pricing.additional': 'Додатково:',
     'pricing.extra1': '+$50 / кожен співробітник понад базу',
     'pricing.extra2': 'Onboarding (налаштування та запуск): $1000-2000',
     'pricing.extra3': 'Інтеграції з ERP: T&M (від $1000)',
     'pricing.extra4': 'Кастомізація та інтеграції з обладнанням — за запитом',
     'pricing.cta': 'Порахувати для вашого складу',
+    'pricing.cta.custom': 'Отримати пропозицію',
     
     // Why Us
     'whyus.title': 'Чим ми відрізняємось від інших',
@@ -141,6 +147,11 @@ const translations = {
     'cases.case1.desc': 'Ми автоматизували склад за 2 тижні, знизили помилки у відвантаженнях на 80% і зекономили 30% витрат на персонал.',
     'cases.case2.title': '3PL-оператор',
     'cases.case2.desc': 'Після впровадження WMS обробка замовлень прискорилась у 3 рази.',
+    'cases.stats.years': '8+ років',
+    'cases.stats.yearsDesc': 'досвіду на ринку',
+    'cases.stats.clients': '150+',
+    'cases.stats.clientsDesc': 'успішних проектів',
+    'cases.stats.cta': 'Ставайте частиною нашої історії успіху',
     
     // Final CTA
     'cta.title': 'Готові перезапустити ваш склад?',
@@ -150,6 +161,7 @@ const translations = {
     
     // Contact Form
     'form.title': 'Залиште ваші контакти',
+    'form.consultation': 'Замовити консультацію',
     'form.name': 'Ім\'я',
     'form.phone': 'Телефон',
     'form.city': 'Місто',
@@ -162,6 +174,20 @@ const translations = {
     'form.integration.2months': '2+ місяці',
     'form.submit': 'Надіслати заявку',
     'form.close': 'Закрити',
+    
+    // Footer
+    'footer.about': 'Про нас',
+    'footer.aboutText': 'Ми робимо автоматизацію складу доступною для кожного бізнесу',
+    'footer.contact': 'Контакти',
+    'footer.email': 'info@wmspro.com',
+    'footer.phone': '+380 (44) 123-45-67',
+    'footer.followUs': 'Слідкуйте за нами',
+    'footer.rights': '© 2025 WMS Pro. Всі права захищені.',
+    
+    // Cookie Consent
+    'cookies.message': 'Ми використовуємо файли cookie для покращення вашого досвіду на сайті. Продовжуючи перегляд, ви погоджуєтесь з нашою політикою використання cookie.',
+    'cookies.accept': 'Прийняти',
+    'cookies.decline': 'Відхилити',
   },
   en: {
     // Header
@@ -242,16 +268,22 @@ const translations = {
     // Pricing
     'pricing.title': 'Transparent Pricing',
     'pricing.base': 'Base Package',
+    'pricing.custom': 'Custom Solution',
     'pricing.perMonth': '/month',
     'pricing.feature1': 'Up to 10 warehouse employees',
     'pricing.feature2': 'Full WMS feature set',
     'pricing.feature3': 'Ongoing support and updates',
+    'pricing.custom.feature1': 'Individual needs analysis',
+    'pricing.custom.feature2': 'Unique module development',
+    'pricing.custom.feature3': 'Full ERP integration',
+    'pricing.custom.feature4': 'Dedicated project manager',
     'pricing.additional': 'Additional:',
     'pricing.extra1': '+$50 / each employee above base',
     'pricing.extra2': 'Onboarding (setup and launch): $1000-2000',
     'pricing.extra3': 'ERP integrations: T&M (from $1000)',
     'pricing.extra4': 'Customization and equipment integrations — on request',
     'pricing.cta': 'Calculate for your warehouse',
+    'pricing.cta.custom': 'Get a quote',
     
     // Why Us
     'whyus.title': 'How we differ from others',
@@ -295,6 +327,11 @@ const translations = {
     'cases.case1.desc': 'We automated the warehouse in 2 weeks, reduced shipping errors by 80% and saved 30% on personnel costs.',
     'cases.case2.title': '3PL operator',
     'cases.case2.desc': 'After WMS implementation, order processing sped up 3x.',
+    'cases.stats.years': '8+ years',
+    'cases.stats.yearsDesc': 'of market experience',
+    'cases.stats.clients': '150+',
+    'cases.stats.clientsDesc': 'successful projects',
+    'cases.stats.cta': 'Become part of our success story',
     
     // Final CTA
     'cta.title': 'Ready to restart your warehouse?',
@@ -304,6 +341,7 @@ const translations = {
     
     // Contact Form
     'form.title': 'Leave your contacts',
+    'form.consultation': 'Request consultation',
     'form.name': 'Name',
     'form.phone': 'Phone',
     'form.city': 'City',
@@ -316,6 +354,20 @@ const translations = {
     'form.integration.2months': '2+ months',
     'form.submit': 'Submit request',
     'form.close': 'Close',
+    
+    // Footer
+    'footer.about': 'About Us',
+    'footer.aboutText': 'We make warehouse automation accessible to every business',
+    'footer.contact': 'Contact',
+    'footer.email': 'info@wmspro.com',
+    'footer.phone': '+380 (44) 123-45-67',
+    'footer.followUs': 'Follow Us',
+    'footer.rights': '© 2025 WMS Pro. All rights reserved.',
+    
+    // Cookie Consent
+    'cookies.message': 'We use cookies to improve your experience on our website. By continuing to browse, you agree to our cookie policy.',
+    'cookies.accept': 'Accept',
+    'cookies.decline': 'Decline',
   },
 };
 

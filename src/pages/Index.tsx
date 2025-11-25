@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
+import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemsSection } from "@/components/sections/ProblemsSection";
 import { BarriersSection } from "@/components/sections/BarriersSection";
@@ -17,9 +19,10 @@ import { CookieConsent } from "@/components/CookieConsent";
 import { ContactForm } from "@/components/ContactForm";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
-const Index = () => {
+const IndexContent = () => {
   const [formOpen, setFormOpen] = useState(false);
   const [formType, setFormType] = useState<'audit' | 'calculate'>('audit');
+  const { t } = useLanguage();
 
   const handleOpenForm = (type: 'audit' | 'calculate') => {
     setFormType(type);
@@ -27,7 +30,7 @@ const Index = () => {
   };
 
   return (
-    <LanguageProvider>
+    <>
       <div className="min-h-screen bg-background">
         <Header />
         <main>
@@ -40,6 +43,29 @@ const Index = () => {
           <WhyUsSection />
           <CompetitorsSection />
           <CasesSection />
+          <div className="py-12 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto space-y-6 text-center">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="text-lg md:text-xl text-muted-foreground"
+                >
+                  {t('cta.separator1')}
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="text-base md:text-lg text-muted-foreground/80"
+                >
+                  {t('cta.separator2')}
+                </motion.div>
+              </div>
+            </div>
+          </div>
           <CTASection onOpenForm={handleOpenForm} />
         </main>
         <Footer />
@@ -48,6 +74,14 @@ const Index = () => {
         <CookieConsent />
         <ContactForm open={formOpen} onOpenChange={setFormOpen} type={formType} />
       </div>
+    </>
+  );
+};
+
+const Index = () => {
+  return (
+    <LanguageProvider>
+      <IndexContent />
     </LanguageProvider>
   );
 };

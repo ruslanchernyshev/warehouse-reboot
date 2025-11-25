@@ -15,7 +15,38 @@ export const WhyUsSection = () => {
 
   return (
     <section className="py-24 bg-secondary text-secondary-foreground relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),rgba(255,255,255,0))]" />
+      <motion.div 
+        className="absolute w-[600px] h-[600px] rounded-full opacity-20"
+        style={{
+          background: 'radial-gradient(circle, rgba(120,119,198,0.4), transparent 70%)',
+          filter: 'blur(60px)',
+        }}
+        animate={{
+          x: ['-200px', 'calc(100% + 200px)', '-200px'],
+          y: ['-200px', 'calc(100% + 200px)', '-200px'],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div 
+        className="absolute w-[500px] h-[500px] rounded-full opacity-15"
+        style={{
+          background: 'radial-gradient(circle, rgba(120,119,198,0.4), transparent 70%)',
+          filter: 'blur(60px)',
+        }}
+        animate={{
+          x: ['calc(100% + 200px)', '-200px', 'calc(100% + 200px)'],
+          y: ['calc(100% + 200px)', '-200px', 'calc(100% + 200px)'],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.h2

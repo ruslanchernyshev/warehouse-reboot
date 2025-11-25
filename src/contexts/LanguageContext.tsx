@@ -15,12 +15,17 @@ const translations = {
     'nav.pricing': 'Тарифи',
     'nav.cases': 'Кейси',
     'nav.contact': 'Контакти',
+    'nav.consultation': 'Консультація',
     
     // Hero
     'hero.title': 'Перезапустимо ваш склад з повною автоматизацією за $1000/місяць',
     'hero.subtitle': 'Хмарна WMS-система + запуск під ключ + консалтинг + інтеграції з обладнанням',
     'hero.cta1': 'Замовити аудит складу',
     'hero.cta2': 'Подивитись демо системи',
+    'hero.slide2.title': 'Автоматизація складу за 2-4 тижні замість 6-12 місяців',
+    'hero.slide2.subtitle': 'Швидкий запуск, повна інтеграція та навчання персоналу включені',
+    'hero.slide3.title': 'Прозора модель: $1000/міс + $50 за співробітника',
+    'hero.slide3.subtitle': 'Без прихованих платежів, з повною підтримкою та оновленнями',
     
     // Problems
     'problems.title': 'Основні проблеми складів сьогодні',
@@ -43,6 +48,8 @@ const translations = {
     'barriers.4.desc': 'Готові рішення не підходять під конкретний бізнес',
     'barriers.5.title': 'Ризик невдачі',
     'barriers.5.desc': 'Компанії бояться витратити кошти, але не отримати результат',
+    'barriers.6.title': 'Відсутність гнучкості',
+    'barriers.6.desc': 'Жорсткі системи не адаптуються до змін у бізнес-процесах',
     
     // Solution
     'solution.title': 'Ми робимо автоматизацію складу доступною та реальною',
@@ -154,6 +161,8 @@ const translations = {
     'cases.stats.cta': 'Ставайте частиною нашої історії успіху',
     
     // Final CTA
+    'cta.separator1': 'Автоматизація складу — це не просто програмне забезпечення, це повна трансформація бізнес-процесів',
+    'cta.separator2': 'Ми допомагаємо компаніям зробити перший крок до ефективного та масштабованого складу',
     'cta.title': 'Готові перезапустити ваш склад?',
     'cta.subtitle': 'Замовте аудит складу безкоштовно та дізнайтеся, як автоматизація за $1000/місяць може змінити ваш бізнес.',
     'cta.button1': 'Замовити консультацію',
@@ -195,12 +204,17 @@ const translations = {
     'nav.pricing': 'Pricing',
     'nav.cases': 'Case Studies',
     'nav.contact': 'Contact',
+    'nav.consultation': 'Consultation',
     
     // Hero
     'hero.title': 'Restart your warehouse with full automation for $1000/month',
     'hero.subtitle': 'Cloud WMS system + turnkey launch + consulting + equipment integrations',
     'hero.cta1': 'Order warehouse audit',
     'hero.cta2': 'View system demo',
+    'hero.slide2.title': 'Warehouse automation in 2-4 weeks instead of 6-12 months',
+    'hero.slide2.subtitle': 'Quick launch, full integration and staff training included',
+    'hero.slide3.title': 'Transparent model: $1000/month + $50 per employee',
+    'hero.slide3.subtitle': 'No hidden fees, with full support and updates',
     
     // Problems
     'problems.title': 'Key warehouse challenges today',
@@ -223,6 +237,8 @@ const translations = {
     'barriers.4.desc': 'Ready-made solutions don\'t fit specific business needs',
     'barriers.5.title': 'Risk of failure',
     'barriers.5.desc': 'Companies fear spending money without getting results',
+    'barriers.6.title': 'Lack of flexibility',
+    'barriers.6.desc': 'Rigid systems don\'t adapt to changes in business processes',
     
     // Solution
     'solution.title': 'We make warehouse automation accessible and real',
@@ -334,6 +350,8 @@ const translations = {
     'cases.stats.cta': 'Become part of our success story',
     
     // Final CTA
+    'cta.separator1': 'Warehouse automation is not just software, it\'s a complete transformation of business processes',
+    'cta.separator2': 'We help companies take the first step towards an efficient and scalable warehouse',
     'cta.title': 'Ready to restart your warehouse?',
     'cta.subtitle': 'Order a free warehouse audit and learn how $1000/month automation can transform your business.',
     'cta.button1': 'Request consultation',

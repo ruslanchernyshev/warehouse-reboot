@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { DollarSign, Clock, Users, Settings, AlertTriangle } from "lucide-react";
+import { DollarSign, Clock, Users, Settings, AlertTriangle, Lock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const BarriersSection = () => {
@@ -12,6 +12,7 @@ export const BarriersSection = () => {
     { icon: Users, title: t('barriers.3.title'), desc: t('barriers.3.desc') },
     { icon: Settings, title: t('barriers.4.title'), desc: t('barriers.4.desc') },
     { icon: AlertTriangle, title: t('barriers.5.title'), desc: t('barriers.5.desc') },
+    { icon: Lock, title: t('barriers.6.title'), desc: t('barriers.6.desc') },
   ];
 
   return (

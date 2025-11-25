@@ -12,13 +12,13 @@ export const ComparisonTableSection = () => {
   }));
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-12 bg-muted/30">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center text-foreground mb-16"
+          className="text-4xl md:text-5xl font-bold text-center text-foreground mb-8"
         >
           {t('comparison.title')}
         </motion.h2>
@@ -32,19 +32,19 @@ export const ComparisonTableSection = () => {
           <Table>
             <TableHeader>
               <TableRow className="bg-primary/10 hover:bg-primary/10">
-                <TableHead className="text-foreground font-bold text-lg">{t('comparison.problem')}</TableHead>
-                <TableHead className="text-center w-16"></TableHead>
-                <TableHead className="text-foreground font-bold text-lg">{t('comparison.solution')}</TableHead>
+                <TableHead className="text-foreground font-bold text-lg py-3">{t('comparison.problem')}</TableHead>
+                <TableHead className="text-center w-16 py-3"></TableHead>
+                <TableHead className="text-foreground font-bold text-lg py-3">{t('comparison.solution')}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {rows.map((row, index) => (
                 <TableRow key={index} className="hover:bg-muted/50">
-                  <TableCell className="text-muted-foreground font-medium">{row.problem}</TableCell>
-                  <TableCell className="text-center">
+                  <TableCell className="text-muted-foreground font-medium py-2">{row.problem}</TableCell>
+                  <TableCell className="text-center py-2">
                     <ArrowRight className="w-5 h-5 text-primary mx-auto" />
                   </TableCell>
-                  <TableCell className="text-foreground font-semibold">{row.solution}</TableCell>
+                  <TableCell className="text-foreground font-semibold py-2">{row.solution}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

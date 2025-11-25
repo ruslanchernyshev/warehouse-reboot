@@ -13,7 +13,7 @@ export const FloatingContact = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1 }}
-        className="fixed bottom-8 left-8 z-40"
+        className="fixed bottom-24 right-8 z-40"
       >
         <Button
           onClick={() => setFormOpen(true)}

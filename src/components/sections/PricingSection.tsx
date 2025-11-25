@@ -25,7 +25,7 @@ export const PricingSection = ({ onOpenForm }: PricingSectionProps) => {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-gradient-to-b from-background to-primary/5">
+    <section id="pricing" className="py-24 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ export const PricingSection = ({ onOpenForm }: PricingSectionProps) => {
             viewport={{ once: true }}
           >
             <Card className="bg-card border-border shadow-xl h-full">
-              <CardHeader className="text-center bg-gradient-to-br from-primary to-accent text-primary-foreground rounded-t-lg">
+              <CardHeader className="text-center bg-gradient-to-br from-muted to-muted/80 text-foreground rounded-t-lg border-b border-border">
                 <CardTitle className="text-3xl">{t('pricing.base')}</CardTitle>
                 <div className="text-5xl font-bold mt-4">
                   $1000
@@ -89,7 +89,7 @@ export const PricingSection = ({ onOpenForm }: PricingSectionProps) => {
             viewport={{ once: true }}
           >
             <Card className="bg-card border-border shadow-xl h-full">
-              <CardHeader className="text-center bg-gradient-to-br from-accent to-primary text-primary-foreground rounded-t-lg">
+              <CardHeader className="text-center bg-gradient-to-br from-muted/80 to-muted text-foreground rounded-t-lg border-b border-border">
                 <CardTitle className="text-3xl">{t('pricing.custom')}</CardTitle>
                 <div className="text-3xl font-bold mt-4">
                   {t('pricing.perMonth')}

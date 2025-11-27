@@ -18,9 +18,10 @@ export const SolutionSection = () => {
   ];
 
   return (
-    <section id="demo" className="py-24 relative overflow-hidden">
+    <section id="demo" className="py-24 relative overflow-hidden bg-background">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background to-accent/8" />
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,0,0,0.02)_25%,rgba(0,0,0,0.02)_50%,transparent_50%,transparent_75%,rgba(0,0,0,0.02)_75%,rgba(0,0,0,0.02))] bg-[size:20px_20px]" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

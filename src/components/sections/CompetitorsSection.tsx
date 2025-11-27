@@ -6,8 +6,10 @@ export const CompetitorsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 bg-gradient-to-b from-muted/30 to-background">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-muted/50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0deg,rgba(0,0,0,0.02)_60deg,transparent_120deg)]" />
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

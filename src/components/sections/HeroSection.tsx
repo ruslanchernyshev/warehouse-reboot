@@ -3,7 +3,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-warehouse.jpg";
 import { ArrowRight, Play } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
+import { useState, useEffect } from "react";
 
 interface HeroSectionProps {
   onOpenForm: (type: 'audit' | 'calculate') => void;
@@ -11,6 +12,8 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
   const { t } = useLanguage();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
 
   const slides = [
     {
@@ -27,6 +30,16 @@ export const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
     },
   ];
 
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -42,7 +55,7 @@ export const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
 
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">
-          <Carousel className="w-full" opts={{ loop: true, align: "start" }}>
+          <Carousel className="w-full" opts={{ loop: true, align: "start" }} setApi={setApi}>
             <CarouselContent>
               {slides.map((slide, index) => (
                 <CarouselItem key={index}>
@@ -97,9 +110,22 @@ export const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 md:left-8 text-primary-foreground border-primary-foreground/30 bg-background/20 hover:bg-background/30" />
-            <CarouselNext className="right-4 md:right-8 text-primary-foreground border-primary-foreground/30 bg-background/20 hover:bg-background/30" />
           </Carousel>
+          
+          <div className="flex justify-center gap-2 mt-8">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  current === index
+                    ? 'bg-primary-foreground w-8'
+                    : 'bg-primary-foreground/30 hover:bg-primary-foreground/50'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 

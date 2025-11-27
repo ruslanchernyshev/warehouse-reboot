@@ -43,9 +43,10 @@ const IndexContent = () => {
           <WhyUsSection />
           <CompetitorsSection />
           <CasesSection />
-          <div className="py-12 bg-background">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto space-y-6 text-center">
+          <div className="py-12 bg-muted/30 relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.05),transparent_70%)]" />
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="max-w-4xl mx-auto space-y-4 text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -58,10 +59,55 @@ const IndexContent = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
+                  transition={{ delay: 0.1 }}
                   className="text-base md:text-lg text-muted-foreground/80"
                 >
                   {t('cta.separator2')}
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="text-base md:text-lg text-muted-foreground/80"
+                >
+                  {t('cta.separator3')}
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="text-base md:text-lg text-muted-foreground/80"
+                >
+                  {t('cta.separator4')}
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="text-base md:text-lg text-muted-foreground/80"
+                >
+                  {t('cta.separator5')}
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 }}
+                  className="text-base md:text-lg text-muted-foreground/80"
+                >
+                  {t('cta.separator6')}
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.6 }}
+                  className="text-base md:text-lg text-muted-foreground/80"
+                >
+                  {t('cta.separator7')}
                 </motion.div>
               </div>
             </div>

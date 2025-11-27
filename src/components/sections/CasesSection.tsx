@@ -13,8 +13,10 @@ export const CasesSection = () => {
   ];
 
   return (
-    <section id="cases" className="py-24 bg-gradient-to-b from-background to-accent/10">
-      <div className="container mx-auto px-4">
+    <section id="cases" className="py-24 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-background to-primary/5" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,transparent_25%,rgba(0,0,0,0.015)_25%,rgba(0,0,0,0.015)_50%,transparent_50%,transparent_75%,rgba(0,0,0,0.015)_75%,rgba(0,0,0,0.015))] bg-[size:40px_40px]" />
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

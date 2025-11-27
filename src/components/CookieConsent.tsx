@@ -39,7 +39,10 @@ export const CookieConsent = () => {
               <div className="flex items-start gap-3 flex-1">
                 <Cookie className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <p className="text-sm text-muted-foreground">
-                  {t('cookies.message')}
+                  {t('cookies.message')}{' '}
+                  <a href="/privacy" className="text-primary hover:underline">
+                    {t('cookies.policyLink')}
+                  </a>
                 </p>
               </div>
               

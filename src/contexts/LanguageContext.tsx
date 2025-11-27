@@ -75,6 +75,7 @@ const translations = {
     'comparison.title': 'Проблема → Рішення',
     'comparison.problem': 'Проблема клієнта',
     'comparison.solution': 'Наше рішення',
+    'comparison.subtitle': 'Як ми вирішуємо ваші складські виклики',
     'comparison.row1.problem': 'Висока вартість WMS (десятки тисяч $)',
     'comparison.row1.solution': 'SaaS-модель: $1000/міс. без великих інвестицій',
     'comparison.row2.problem': 'Довгі терміни запуску (6–12 місяців)',
@@ -163,6 +164,11 @@ const translations = {
     // Final CTA
     'cta.separator1': 'Автоматизація складу — це не просто програмне забезпечення, це повна трансформація бізнес-процесів',
     'cta.separator2': 'Ми допомагаємо компаніям зробити перший крок до ефективного та масштабованого складу',
+    'cta.separator3': 'Наш досвід показує, що правильно налаштована WMS-система збільшує продуктивність на 40-60%',
+    'cta.separator4': 'Зниження помилок у відвантаженнях до мінімуму та повна прозорість усіх складських операцій',
+    'cta.separator5': 'Масштабування без додаткових капітальних витрат — ваш склад росте разом з бізнесом',
+    'cta.separator6': 'Професійна підтримка та консалтинг на кожному етапі впровадження та експлуатації',
+    'cta.separator7': 'Результати вже через 2-4 тижні замість місяців очікування та невизначеності',
     'cta.title': 'Готові перезапустити ваш склад?',
     'cta.subtitle': 'Замовте аудит складу безкоштовно та дізнайтеся, як автоматизація за $1000/місяць може змінити ваш бізнес.',
     'cta.button1': 'Замовити консультацію',
@@ -194,9 +200,40 @@ const translations = {
     'footer.rights': '© 2025 WMS Pro. Всі права захищені.',
     
     // Cookie Consent
-    'cookies.message': 'Ми використовуємо файли cookie для покращення вашого досвіду на сайті. Продовжуючи перегляд, ви погоджуєтесь з нашою політикою використання cookie.',
+    'cookies.message': 'Ми використовуємо файли cookie для покращення вашого досвіду на сайті. Продовжуючи перегляд, ви погоджуєтесь з нашою',
+    'cookies.policyLink': 'політикою конфіденційності',
     'cookies.accept': 'Прийняти',
     'cookies.decline': 'Відхилити',
+    
+    // Contact Page
+    'contactPage.title': 'Контакти',
+    'contactPage.subtitle': 'Зв\'яжіться з нами будь-яким зручним способом',
+    'contactPage.email.title': 'Email',
+    'contactPage.phone.title': 'Телефон',
+    'contactPage.address.title': 'Адреса',
+    'contactPage.address.value': 'Київ, Україна',
+    'contactPage.hours.title': 'Години роботи',
+    'contactPage.hours.value': 'Пн-Пт: 9:00 - 18:00',
+    'contactPage.form.title': 'Надішліть повідомлення',
+    'contactPage.form.subtitle': 'Заповніть форму, і ми зв\'яжемось з вами найближчим часом',
+    'contactPage.form.message': 'Повідомлення',
+    'contactPage.form.messagePlaceholder': 'Ваше повідомлення...',
+    
+    // Privacy Page
+    'privacy.title': 'Політика конфіденційності',
+    'privacy.lastUpdated': 'Останнє оновлення: 2025',
+    'privacy.section1.title': '1. Збір інформації',
+    'privacy.section1.content': 'Ми збираємо інформацію, яку ви надаєте нам безпосередньо, включаючи ім\'я, телефон, email та інші дані, які ви вводите в форми на нашому сайті.',
+    'privacy.section2.title': '2. Використання інформації',
+    'privacy.section2.content': 'Ми використовуємо зібрану інформацію для зв\'язку з вами, надання послуг, відправки важливих повідомлень та покращення нашого сервісу.',
+    'privacy.section3.title': '3. Захист даних',
+    'privacy.section3.content': 'Ми вживаємо заходів для захисту вашої особистої інформації від несанкціонованого доступу, зміни, розкриття або знищення.',
+    'privacy.section4.title': '4. Файли cookie',
+    'privacy.section4.content': 'Наш сайт використовує файли cookie для покращення користувацького досвіду. Ви можете налаштувати браузер для відмови від cookie.',
+    'privacy.section5.title': '5. Розкриття інформації',
+    'privacy.section5.content': 'Ми не продаємо, не обмінюємо та не передаємо вашу особисту інформацію третім особам без вашої згоди, за винятком випадків, передбачених законом.',
+    'privacy.section6.title': '6. Зв\'язок з нами',
+    'privacy.section6.content': 'Якщо у вас є питання щодо цієї політики конфіденційності, будь ласка, зв\'яжіться з нами:',
   },
   en: {
     // Header
@@ -264,6 +301,7 @@ const translations = {
     'comparison.title': 'Problem → Solution',
     'comparison.problem': 'Customer problem',
     'comparison.solution': 'Our solution',
+    'comparison.subtitle': 'How we solve your warehouse challenges',
     'comparison.row1.problem': 'High WMS cost (tens of thousands $)',
     'comparison.row1.solution': 'SaaS model: $1000/month without large investments',
     'comparison.row2.problem': 'Long launch times (6-12 months)',
@@ -352,6 +390,11 @@ const translations = {
     // Final CTA
     'cta.separator1': 'Warehouse automation is not just software, it\'s a complete transformation of business processes',
     'cta.separator2': 'We help companies take the first step towards an efficient and scalable warehouse',
+    'cta.separator3': 'Our experience shows that a properly configured WMS system increases productivity by 40-60%',
+    'cta.separator4': 'Reducing shipping errors to a minimum and complete transparency of all warehouse operations',
+    'cta.separator5': 'Scaling without additional capital costs — your warehouse grows with your business',
+    'cta.separator6': 'Professional support and consulting at every stage of implementation and operation',
+    'cta.separator7': 'Results in just 2-4 weeks instead of months of waiting and uncertainty',
     'cta.title': 'Ready to restart your warehouse?',
     'cta.subtitle': 'Order a free warehouse audit and learn how $1000/month automation can transform your business.',
     'cta.button1': 'Request consultation',
@@ -383,9 +426,40 @@ const translations = {
     'footer.rights': '© 2025 WMS Pro. All rights reserved.',
     
     // Cookie Consent
-    'cookies.message': 'We use cookies to improve your experience on our website. By continuing to browse, you agree to our cookie policy.',
+    'cookies.message': 'We use cookies to improve your experience on our website. By continuing to browse, you agree to our',
+    'cookies.policyLink': 'privacy policy',
     'cookies.accept': 'Accept',
     'cookies.decline': 'Decline',
+    
+    // Contact Page
+    'contactPage.title': 'Contact Us',
+    'contactPage.subtitle': 'Get in touch with us in any convenient way',
+    'contactPage.email.title': 'Email',
+    'contactPage.phone.title': 'Phone',
+    'contactPage.address.title': 'Address',
+    'contactPage.address.value': 'Kyiv, Ukraine',
+    'contactPage.hours.title': 'Working Hours',
+    'contactPage.hours.value': 'Mon-Fri: 9:00 AM - 6:00 PM',
+    'contactPage.form.title': 'Send us a message',
+    'contactPage.form.subtitle': 'Fill out the form and we will contact you soon',
+    'contactPage.form.message': 'Message',
+    'contactPage.form.messagePlaceholder': 'Your message...',
+    
+    // Privacy Page
+    'privacy.title': 'Privacy Policy',
+    'privacy.lastUpdated': 'Last updated: 2025',
+    'privacy.section1.title': '1. Information Collection',
+    'privacy.section1.content': 'We collect information that you provide to us directly, including name, phone, email, and other data you enter in forms on our website.',
+    'privacy.section2.title': '2. Use of Information',
+    'privacy.section2.content': 'We use the collected information to contact you, provide services, send important messages, and improve our service.',
+    'privacy.section3.title': '3. Data Protection',
+    'privacy.section3.content': 'We take measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.',
+    'privacy.section4.title': '4. Cookies',
+    'privacy.section4.content': 'Our website uses cookies to improve user experience. You can configure your browser to refuse cookies.',
+    'privacy.section5.title': '5. Information Disclosure',
+    'privacy.section5.content': 'We do not sell, exchange, or transfer your personal information to third parties without your consent, except as required by law.',
+    'privacy.section6.title': '6. Contact Us',
+    'privacy.section6.content': 'If you have questions about this privacy policy, please contact us:',
   },
 };
 

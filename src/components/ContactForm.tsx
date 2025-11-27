@@ -23,11 +23,32 @@ export const ContactForm = ({ open, onOpenChange, type = 'audit' }: ContactFormP
     integration: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(type === 'audit' ? 'Дякуємо! Ми зв\'яжемось з вами найближчим часом.' : 'Дякуємо! Ми надішлемо розрахунок протягом дня.');
-    onOpenChange(false);
-    setFormData({ name: '', phone: '', city: '', package: '', integration: '' });
+    
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          type,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      toast.success(type === 'audit' ? 'Дякуємо! Ми зв\'яжемось з вами найближчим часом.' : 'Дякуємо! Ми надішлемо розрахунок протягом дня.');
+      onOpenChange(false);
+      setFormData({ name: '', phone: '', city: '', package: '', integration: '' });
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('Помилка відправки. Спробуйте ще раз або зв\'яжіться з нами безпосередньо.');
+    }
   };
 
   return (

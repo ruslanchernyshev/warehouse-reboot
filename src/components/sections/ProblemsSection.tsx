@@ -16,8 +16,9 @@ export const ProblemsSection = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background" />
+    <section className="py-24 relative overflow-hidden bg-background">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-accent/3" />
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.h2

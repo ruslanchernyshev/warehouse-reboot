@@ -25,8 +25,10 @@ export const PricingSection = ({ onOpenForm }: PricingSectionProps) => {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-gradient-to-b from-background to-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="pricing" className="py-24 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/2 to-transparent" />
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +45,7 @@ export const PricingSection = ({ onOpenForm }: PricingSectionProps) => {
             viewport={{ once: true }}
           >
             <Card className="bg-card border-border shadow-xl h-full">
-              <CardHeader className="text-center bg-gradient-to-br from-muted to-muted/80 text-foreground rounded-t-lg border-b border-border">
+              <CardHeader className="text-center bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-blue-900/20 text-foreground rounded-t-lg border-b border-border">
                 <CardTitle className="text-3xl">{t('pricing.base')}</CardTitle>
                 <div className="text-5xl font-bold mt-4">
                   $1000

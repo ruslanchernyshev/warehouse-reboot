@@ -77,10 +77,7 @@ export const ContactForm = ({ open, onOpenChange, type = 'audit' }: ContactFormP
               id="phone"
               type="tel"
               value={formData.phone}
-              onChange={(e) => {
-                const value = e.target.value.replace(/\D/g, '');
-                setFormData({ ...formData, phone: value });
-              }}
+                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               required
               className="bg-background border-input text-foreground"
             />

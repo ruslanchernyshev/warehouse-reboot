@@ -48,27 +48,27 @@ const IndexContent = () => {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.05),transparent_70%)]" />
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-6xl mx-auto">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="grid md:grid-cols-2 gap-8 items-start">
                   <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="space-y-3"
+                    className="space-y-3 flex flex-col h-full"
                   >
-                    <p className="text-base md:text-lg text-muted-foreground">{t('cta.separator1')}</p>
-                    <p className="text-base md:text-lg text-muted-foreground">{t('cta.separator2')}</p>
-                    <p className="text-base md:text-lg text-muted-foreground">{t('cta.separator3')}</p>
-                    <p className="text-base md:text-lg text-muted-foreground">{t('cta.separator4')}</p>
+                    <p className="text-base md:text-lg text-muted-foreground flex-1">{t('cta.separator1')}</p>
+                    <p className="text-base md:text-lg text-muted-foreground flex-1">{t('cta.separator2')}</p>
+                    <p className="text-base md:text-lg text-muted-foreground flex-1">{t('cta.separator3')}</p>
+                    <p className="text-base md:text-lg text-muted-foreground flex-1">{t('cta.separator4')}</p>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="space-y-3"
+                    className="space-y-3 flex flex-col h-full"
                   >
-                    <p className="text-base md:text-lg text-muted-foreground">{t('cta.separator5')}</p>
-                    <p className="text-base md:text-lg text-muted-foreground">{t('cta.separator6')}</p>
-                    <p className="text-base md:text-lg text-muted-foreground">{t('cta.separator7')}</p>
+                    <p className="text-base md:text-lg text-muted-foreground flex-1">{t('cta.separator5')}</p>
+                    <p className="text-base md:text-lg text-muted-foreground flex-1">{t('cta.separator6')}</p>
+                    <p className="text-base md:text-lg text-muted-foreground flex-1">{t('cta.separator7')}</p>
                     <div className="mt-6 rounded-lg overflow-hidden shadow-lg">
                       <img 
                         src={solutionImage} 

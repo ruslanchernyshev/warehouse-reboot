@@ -57,7 +57,7 @@ export const ContactForm = ({ open, onOpenChange, type = 'audit' }: ContactFormP
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md bg-card border-border">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center text-foreground">{t('form.title')}</DialogTitle>
+          <DialogTitle className="text-foreground">{t('form.title')}</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
@@ -77,10 +77,7 @@ export const ContactForm = ({ open, onOpenChange, type = 'audit' }: ContactFormP
               id="phone"
               type="tel"
               value={formData.phone}
-              onChange={(e) => {
-                const value = e.target.value.replace(/\D/g, '');
-                setFormData({ ...formData, phone: value });
-              }}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               required
               className="bg-background border-input text-foreground"
             />
@@ -127,9 +124,12 @@ export const ContactForm = ({ open, onOpenChange, type = 'audit' }: ContactFormP
             </>
           )}
 
-          <div className="pt-4">
-            <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+          <div className="flex gap-3 pt-4">
+            <Button type="submit" className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
               {t('form.submit')}
+            </Button>
+            <Button type="button" variant="outline" onClick={() => onOpenChange(false)} className="border-border text-foreground hover:bg-muted">
+              {t('form.close')}
             </Button>
           </div>
         </form>

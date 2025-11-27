@@ -4,51 +4,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-import { useState, useEffect } from "react";
-import { ThankYouDialog } from "@/components/ThankYouDialog";
-import { toast } from "sonner";
 
 const ContactContent = () => {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    message: '',
-  });
-  const [thankYouOpen, setThankYouOpen] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          message: formData.message,
-          type: 'audit',
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send email');
-      }
-
-      setFormData({ name: '', phone: '', message: '' });
-      setThankYouOpen(true);
-    } catch (error) {
-      console.error('Error:', error);
-      toast.error('Помилка відправки. Спробуйте ще раз або зв\'яжіться з нами безпосередньо.');
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -121,16 +79,13 @@ const ContactContent = () => {
               >
                 <h2 className="text-2xl font-bold text-foreground mb-4">{t('contactPage.form.title')}</h2>
                 <p className="text-muted-foreground mb-6">{t('contactPage.form.subtitle')}</p>
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       {t('form.name')}
                     </label>
                     <input
                       type="text"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-2 bg-background border border-input rounded-md text-foreground"
                       placeholder={t('form.name')}
                     />
@@ -141,9 +96,6 @@ const ContactContent = () => {
                     </label>
                     <input
                       type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-2 bg-background border border-input rounded-md text-foreground"
                       placeholder={t('form.phone')}
                     />
@@ -154,23 +106,20 @@ const ContactContent = () => {
                     </label>
                     <textarea
                       rows={4}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-2 bg-background border border-input rounded-md text-foreground"
                       placeholder={t('contactPage.form.messagePlaceholder')}
                     />
                   </div>
-                  <button type="submit" className="w-full px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
+                  <button className="w-full px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
                     {t('form.submit')}
                   </button>
-                </form>
+                </div>
               </motion.div>
             </div>
           </div>
         </section>
       </main>
       <Footer />
-      <ThankYouDialog open={thankYouOpen} onOpenChange={setThankYouOpen} type="audit" />
     </div>
   );
 };

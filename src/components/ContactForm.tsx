@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { toast } from "sonner";
+import { ThankYouDialog } from "@/components/ThankYouDialog";
 
 interface ContactFormProps {
   open: boolean;
@@ -22,6 +23,7 @@ export const ContactForm = ({ open, onOpenChange, type = 'audit' }: ContactFormP
     package: '',
     integration: '',
   });
+  const [thankYouOpen, setThankYouOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,9 +44,9 @@ export const ContactForm = ({ open, onOpenChange, type = 'audit' }: ContactFormP
         throw new Error('Failed to send email');
       }
 
-      toast.success(type === 'audit' ? 'Дякуємо! Ми зв\'яжемось з вами найближчим часом.' : 'Дякуємо! Ми надішлемо розрахунок протягом дня.');
       onOpenChange(false);
       setFormData({ name: '', phone: '', city: '', package: '', integration: '' });
+      setThankYouOpen(true);
     } catch (error) {
       console.error('Error:', error);
       toast.error('Помилка відправки. Спробуйте ще раз або зв\'яжіться з нами безпосередньо.');
@@ -132,6 +134,7 @@ export const ContactForm = ({ open, onOpenChange, type = 'audit' }: ContactFormP
           </div>
         </form>
       </DialogContent>
+      <ThankYouDialog open={thankYouOpen} onOpenChange={setThankYouOpen} type={type} />
     </Dialog>
   );
 };

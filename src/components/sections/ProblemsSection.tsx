@@ -1,7 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import problemsImage from "@/assets/problems-warehouse.jpg";
-import { XCircle } from "lucide-react";
 
 export const ProblemsSection = () => {
   const { t } = useLanguage();
@@ -48,10 +47,12 @@ export const ProblemsSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-3 p-4 bg-card rounded-lg border border-border hover:shadow-md transition-shadow"
+                className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border hover:shadow-md transition-shadow"
               >
-                <XCircle className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
-                <p className="text-foreground">{problem}</p>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-bold text-lg shadow-md">
+                  {index + 1}
+                </div>
+                <p className="text-foreground flex-1">{problem}</p>
               </motion.div>
             ))}
           </div>

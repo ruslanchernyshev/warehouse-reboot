@@ -162,6 +162,8 @@ const translations = {
     'cases.stats.cta': 'Ставайте частиною нашої історії успіху',
     
     // Final CTA
+    'cta.title.part1': 'Готові перезапустити',
+    'cta.title.part2': 'ваш склад?',
     'cta.separator1': 'Автоматизація складу — це не просто програмне забезпечення, це повна трансформація бізнес-процесів',
     'cta.separator2': 'Ми допомагаємо компаніям зробити перший крок до ефективного та масштабованого складу',
     'cta.separator3': 'Наш досвід показує, що правильно налаштована WMS-система збільшує продуктивність на 40-60%',
@@ -204,6 +206,13 @@ const translations = {
     'cookies.policyLink': 'політикою конфіденційності',
     'cookies.accept': 'Прийняти',
     'cookies.decline': 'Відхилити',
+    
+    // Thank You Dialog
+    'thankYou.title': 'Дякуємо за заявку!',
+    'thankYou.message.audit': 'Наш менеджер зв\'яжеться з вами найближчим часом для обговорення деталей аудиту складу.',
+    'thankYou.message.calculate': 'Наш менеджер зв\'яжеться з вами протягом дня та надішле детальний розрахунок вартості.',
+    'thankYou.submessage': 'Ми працюємо з 9:00 до 18:00, Пн-Пт',
+    'thankYou.close': 'Закрити',
     
     // Contact Page
     'contactPage.title': 'Контакти',
@@ -388,6 +397,8 @@ const translations = {
     'cases.stats.cta': 'Become part of our success story',
     
     // Final CTA
+    'cta.title.part1': 'Ready to restart',
+    'cta.title.part2': 'your warehouse?',
     'cta.separator1': 'Warehouse automation is not just software, it\'s a complete transformation of business processes',
     'cta.separator2': 'We help companies take the first step towards an efficient and scalable warehouse',
     'cta.separator3': 'Our experience shows that a properly configured WMS system increases productivity by 40-60%',
@@ -430,6 +441,13 @@ const translations = {
     'cookies.policyLink': 'privacy policy',
     'cookies.accept': 'Accept',
     'cookies.decline': 'Decline',
+    
+    // Thank You Dialog
+    'thankYou.title': 'Thank you for your request!',
+    'thankYou.message.audit': 'Our manager will contact you soon to discuss warehouse audit details.',
+    'thankYou.message.calculate': 'Our manager will contact you within the day and send a detailed cost calculation.',
+    'thankYou.submessage': 'We work from 9:00 AM to 6:00 PM, Mon-Fri',
+    'thankYou.close': 'Close',
     
     // Contact Page
     'contactPage.title': 'Contact Us',

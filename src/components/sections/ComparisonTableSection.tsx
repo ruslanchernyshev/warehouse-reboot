@@ -1,7 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, XCircle } from "lucide-react";
 
 export const ComparisonTableSection = () => {
   const { t } = useLanguage();
@@ -41,11 +40,11 @@ export const ComparisonTableSection = () => {
               <Card className="h-full border-border hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4 mb-4">
-                    <XCircle className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
+                    <span className="text-2xl flex-shrink-0">😞</span>
                     <p className="text-muted-foreground flex-1">{row.problem}</p>
                   </div>
                   <div className="flex items-start gap-4 pt-4 border-t border-border">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <span className="text-2xl flex-shrink-0">✅</span>
                     <p className="text-foreground font-medium flex-1">{row.solution}</p>
                   </div>
                 </CardContent>

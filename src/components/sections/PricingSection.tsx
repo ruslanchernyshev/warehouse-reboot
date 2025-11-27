@@ -93,9 +93,6 @@ export const PricingSection = ({ onOpenForm }: PricingSectionProps) => {
             <Card className="bg-card border-border shadow-xl h-full">
               <CardHeader className="text-center bg-gradient-to-br from-muted/80 to-muted text-foreground rounded-t-lg border-b border-border">
                 <CardTitle className="text-3xl">{t('pricing.custom')}</CardTitle>
-                <div className="text-3xl font-bold mt-4">
-                  {t('pricing.perMonth')}
-                </div>
               </CardHeader>
               <CardContent className="p-8">
                 <ul className="space-y-4 mb-8">

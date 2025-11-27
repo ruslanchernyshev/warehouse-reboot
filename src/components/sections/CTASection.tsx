@@ -23,7 +23,9 @@ export const CTASection = ({ onOpenForm }: CTASectionProps) => {
           className="text-center max-w-4xl mx-auto"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6">
-            {t('cta.title')}
+            {t('cta.title.part1')}
+            <br />
+            <span className="text-primary-foreground/90">{t('cta.title.part2')}</span>
           </h2>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12">
             {t('cta.subtitle')}
@@ -42,7 +44,7 @@ export const CTASection = ({ onOpenForm }: CTASectionProps) => {
               size="lg"
               variant="outline"
               onClick={() => onOpenForm('calculate')}
-              className="bg-background/10 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:bg-background/20 group text-lg px-8 py-6"
+              className="bg-background/10 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:bg-background/20 group text-lg px-8 py-6 animate-pulse"
             >
               <Calculator className="mr-2 w-5 h-5" />
               {t('cta.button2')}

@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { useState, useEffect } from "react";
 import { ThankYouDialog } from "@/components/ThankYouDialog";
+import { ContactForm } from "@/components/ContactForm";
 import { toast } from "sonner";
 
 const ContactContent = () => {
@@ -16,6 +17,13 @@ const ContactContent = () => {
     message: '',
   });
   const [thankYouOpen, setThankYouOpen] = useState(false);
+  const [contactFormOpen, setContactFormOpen] = useState(false);
+  const [contactFormType, setContactFormType] = useState<'audit' | 'calculate'>('audit');
+
+  const handleOpenForm = (type: 'audit' | 'calculate') => {
+    setContactFormType(type);
+    setContactFormOpen(true);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -52,7 +60,7 @@ const ContactContent = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header onOpenForm={handleOpenForm} />
       <main className="pt-20">
         <section className="py-24">
           <div className="container mx-auto px-4">
@@ -119,7 +127,7 @@ const ContactContent = () => {
                 transition={{ delay: 0.3 }}
                 className="p-6 bg-card rounded-lg border border-border"
               >
-                <h2 className="text-2xl font-bold text-foreground mb-4">{t('contactPage.form.title')}</h2>
+                <h2 className="text-3xl font-bold text-center text-foreground mb-4">{t('contactPage.form.title')}</h2>
                 <p className="text-muted-foreground mb-6">{t('contactPage.form.subtitle')}</p>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
@@ -143,7 +151,10 @@ const ContactContent = () => {
                       type="tel"
                       required
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/\D/g, '');
+                        setFormData({ ...formData, phone: value });
+                      }}
                       className="w-full px-4 py-2 bg-background border border-input rounded-md text-foreground"
                       placeholder={t('form.phone')}
                     />
@@ -171,6 +182,7 @@ const ContactContent = () => {
       </main>
       <Footer />
       <ThankYouDialog open={thankYouOpen} onOpenChange={setThankYouOpen} type="audit" />
+      <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} type={contactFormType} />
     </div>
   );
 };

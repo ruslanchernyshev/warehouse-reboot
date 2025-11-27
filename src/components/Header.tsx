@@ -2,10 +2,20 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Globe, Warehouse } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const { language, setLanguage, t } = useLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
 
   const scrollToSection = (id: string) => {
     if (window.location.pathname !== '/') {
@@ -30,10 +40,13 @@ export const Header = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <button
+            onClick={handleLogoClick}
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+          >
             <Warehouse className="w-8 h-8 text-primary" />
             <span className="text-xl font-bold text-foreground">WMS Pro</span>
-          </div>
+          </button>
 
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (

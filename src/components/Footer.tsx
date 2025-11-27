@@ -19,8 +19,18 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">{t('footer.contact')}</h3>
             <div className="space-y-2 text-secondary-foreground/80">
-              <p>{t('footer.email')}</p>
-              <p>{t('footer.phone')}</p>
+              <a 
+                href={`mailto:${t('footer.email')}`}
+                className="block hover:text-primary transition-colors"
+              >
+                {t('footer.email')}
+              </a>
+              <a 
+                href={`tel:${t('footer.phone')}`}
+                className="block hover:text-primary transition-colors"
+              >
+                {t('footer.phone')}
+              </a>
             </div>
           </div>
 

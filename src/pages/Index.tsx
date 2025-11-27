@@ -33,7 +33,7 @@ const IndexContent = () => {
   return (
     <>
       <div className="min-h-screen bg-background">
-        <Header />
+        <Header onOpenForm={handleOpenForm} />
         <main>
           <HeroSection onOpenForm={handleOpenForm} />
           <ProblemsSection />
